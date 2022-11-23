@@ -1,0 +1,14 @@
+#!/bin/sh
+# Using external pipe with st, give a dmenu prompt of recent commands,
+# allowing the user to edit the output of one.
+tmp1=$(mktemp /tmp/st-cmd-output.XXXXXX)
+tmp2=$(mktemp /tmp/st-cmd-output.XXXXXX)
+trap 'rm "$tmp1"' 0 1 15
+
+sed -n "w $tmp1"
+sed -i 's/\x0//g' "$tmp1"
+ps1="$(grep "\S" "$tmp1" | tail -n 1 | sed 's/^\s*//' | cut -d' ' -f1)"
+chosen="$(grep -F "$ps1" "$tmp1" | sed '$ d' | tac | dmenu -p "Edit which command's output?" -i -l 10 | sed 's/[^^]/[&]/g; s/\^/\\^/g')"
+eps1="$(echo "$ps1" | sed 's/[^^]/[&]/g; s/\^/\\^/g')"
+awk "/^$chosen$/{p=1;print;next} p&&/$eps1/{p=0};p" "$tmp1" > "$tmp2"
+st -e nvim "$tmp2" && rm "$tmp2"
