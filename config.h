@@ -107,7 +107,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 4;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.6;
 float alphaOffset = 0.0;
 float alphaUnfocus = 0.9;
 
@@ -259,8 +259,8 @@ static Shortcut shortcuts[] = {
     { TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
     { TERMMOD,              XK_Next,        zoom,           {.f = -1} },
     { TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-    { MODKEY,               XK_c,           clipcopy,       {.i =  0} },
-    { MODKEY,               XK_v,           clippaste,      {.i =  0} },
+    { MODKEY,               XK_j,           clipcopy,       {.i =  0} },
+    { MODKEY,               XK_k,           clippaste,      {.i =  0} },
     { ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
     { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
     { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
@@ -268,24 +268,24 @@ static Shortcut shortcuts[] = {
     { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
     { MODKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
     { MODKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
-    { MODKEY,               XK_k,           kscrollup,      {.i =  1} },
-    { MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
+    { MODKEY,               XK_h,           kscrollup,      {.i =  1} },
+    { MODKEY,               XK_t,           kscrolldown,    {.i =  1} },
     { MODKEY,               XK_Up,          kscrollup,      {.i =  1} },
     { MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
-    { MODKEY,               XK_u,           kscrollup,      {.i = -1} },
-    { MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
-    { MODKEY,               XK_s,           changealpha,    {.f = -0.05} },
+    { MODKEY,               XK_g,           kscrollup,      {.i = -1} },
+    { MODKEY,               XK_e,           kscrolldown,    {.i = -1} },
+    { MODKEY,               XK_o,           changealpha,    {.f = -0.05} },
     { MODKEY,               XK_a,           changealpha,    {.f = +0.05} },
-    { MODKEY,               XK_equal,       zoom,           {.f = +1} },
-    { MODKEY,               XK_minus,       zoom,           {.f = -1} },
-    { TERMMOD,              XK_K,           zoom,           {.f = +1} },
-    { TERMMOD,              XK_J,           zoom,           {.f = -1} },
-    { TERMMOD,              XK_U,           zoom,           {.f = +2} },
-    { TERMMOD,              XK_D,           zoom,           {.f = -2} },
-    { MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
-    { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-    { MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
-    { MODKEY,               XK_e,           externalpipe,   {.v = editoutput } },
+    { MODKEY,               XK_bar,         zoom,           {.f = +1} },
+    { MODKEY,               XK_exclam,      zoom,           {.f = -1} },
+    { TERMMOD,              XK_T,           zoom,           {.f = +1} },
+    { TERMMOD,              XK_H,           zoom,           {.f = -1} },
+    { TERMMOD,              XK_G,           zoom,           {.f = +2} },
+    { TERMMOD,              XK_E,           zoom,           {.f = -2} },
+    { MODKEY,               XK_n,           externalpipe,   {.v = openurlcmd } },
+    { MODKEY,               XK_f,           externalpipe,   {.v = copyurlcmd } },
+    { MODKEY,               XK_p,           externalpipe,   {.v = copyoutput } },
+    { MODKEY,               XK_period,      externalpipe,   {.v = editoutput } },
 };
 
 /*
