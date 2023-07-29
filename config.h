@@ -4,9 +4,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Hack FC Ligatured CCG:pixelsize=22";
+static char *font = "Hack FC Ligatured CCG:size=15";
 static char *font2[] = {
-  "Hack FC Ligatured:pixelsize=22",
+  "Hack FC Ligatured:size=15",
 };
 static int borderpx = 2;
 /*
