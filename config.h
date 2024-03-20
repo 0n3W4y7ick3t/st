@@ -4,9 +4,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "FiraCode Nerd Font:size=12";
+static char *font = "FiraCode Nerd Font Freeze:size=12";
 static char *font2[] = {
-    "MonoLisa:size=12",
+    "FiraCode Nerd Font Freeze:size=12",
 };
 static int borderpx = 2;
 /*
