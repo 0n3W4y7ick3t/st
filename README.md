@@ -4,9 +4,7 @@ If you encounter with some situation when some charactors (typically, cjk ones) 
 delete ~/.cache/fontconfig, remake and log back in X. (me personally don't know why...)\
 Note that in arch-like distros, you can`yay -S wqy-microhei` to get a nice cjk font.
 
-+ [HackFCLigatureCCG](https://github.com/gaplo917/Ligatured-Hack) font:
-  + Ligatures support (the same with FiraCode)
-  + Powerline support (flawlessly work with vim-airline and agnoster)
+fonts: [firacode nerd(modified)](https://github.com/0n3W4y7ick3t/deployLinux/tree/main/firacode-nerd)
 
 ## Unique features (using dmenu)
 
